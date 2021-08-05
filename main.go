@@ -20,6 +20,7 @@ func GetAddIntsFunction(this js.Value, args []js.Value) interface{} {
 }
 
 func Fib(x int) int {
+	time.Sleep(1 * time.Microsecond)
 	if x == 1 || x == 2 {
 		return 1
 	}
@@ -31,7 +32,6 @@ func AsyncFib(this js.Value, args []js.Value) interface{} {
 	callback := args[1]
 
 	go func() {
-		time.Sleep(1 * time.Millisecond)
 		result := Fib(fibnr)
 		callback.Invoke(result)
 	}()

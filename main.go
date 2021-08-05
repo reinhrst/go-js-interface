@@ -4,7 +4,6 @@ import (
 	"runtime"
 	"syscall/js"
 	"time"
-	"webinterface/mylib"
 )
 
 func AddInts(this js.Value, args []js.Value) interface{} {
@@ -13,7 +12,7 @@ func AddInts(this js.Value, args []js.Value) interface{} {
 	}
 	a := args[0].Int()
 	b := args[1].Int()
-	return mylib.AddInts(a, b)
+	return a + b
 }
 
 func GetAddIntsFunction(this js.Value, args []js.Value) interface{} {

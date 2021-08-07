@@ -1,4 +1,4 @@
-This repo contains the code for a blog post that I will make sometime later today.
+This repo contains the code for a [blog post](https://blog.claude.nl/tech/howto/interface-between-go-1.16-and-javascript-syscall-js/).
 
 In order to run the code (you need to have Go 1.16 installed):
 
